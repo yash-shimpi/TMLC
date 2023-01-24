@@ -1,4 +1,9 @@
 [class="main css-k1vhr4 egzxvld5"]{
-    background-color: #FFDEE9;
+    /* background-color: #FFDEE9; */
     background-image: linear-gradient(0deg, #FFDEE9 0%, #B5FFFC 100%);
+    /* primaryColor = "#E694FF" */
+    background-color: #00172B;
+    /* secondaryBackgroundColor = "#0083B8" */
+    color: #C6CDD4;
+    /* font:'sans-serif'; */
 }

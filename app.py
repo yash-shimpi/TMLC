@@ -3,8 +3,6 @@ import pandas as pd
 import numpy as np
 from gan import GAN
 
-
-
 st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Data Generator", layout="centered")
 
 with open('style.css') as f:
@@ -56,6 +54,9 @@ def main():
 
         st.download_button(label = 'Download CSV', data = gen_data.to_csv(), file_name = 'gen.csv')
             # st.write('Thanks for downloading!')
+
+# st.markdown("<h1 style='text-align: center;'>Synthetic Data Generator App 🗂️</h1>", unsafe_allow_html = True)
+
 
 if __name__ == '__main__':
     main()

@@ -5,11 +5,11 @@ from gan import GAN
 
 
 
-st.set_page_config(page_icon="📊", page_title="CSV Wrangler", layout = "wide")
+st.set_page_config(page_icon="📊", page_title="Data Generator", layout = "narrow")
 
 with open('style.css') as f:
      st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
-     
+
 st.markdown("<h1 style='text-align: center;'>Synthetic Data Generator App 🗂️</h1>", unsafe_allow_html=True)
 
 def main():

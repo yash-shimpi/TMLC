@@ -43,7 +43,7 @@ def main():
 
     if submit:
         # print(Columns.dtype)
-        List_col = Columns.split(",")
+        List_col = Columns.split(", ")
         List_tar = Target.split(",")
         gen_data = GAN(df, List_col, List_tar)
         # gen_data.to_csv('file.csv')

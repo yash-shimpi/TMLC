@@ -5,7 +5,7 @@ from gan import GAN
 
 
 
-st.set_page_config(page_icon="📊", page_title="Data Generator", layout="centered")
+st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Data Generator", layout="centered")
 
 with open('style.css') as f:
      st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)

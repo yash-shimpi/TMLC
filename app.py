@@ -3,6 +3,9 @@ import pandas as pd
 import numpy as np
 from gan import GAN
 
+with open('style.css') as f:
+     st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
+
 st.set_page_config(page_icon="📊", page_title="CSV Wrangler", layout = "wide")
 
 st.markdown("<h1 style='text-align: center;'>Synthetic Data Generator App 🗂️</h1>", unsafe_allow_html=True)

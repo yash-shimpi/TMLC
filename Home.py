@@ -18,7 +18,6 @@ def main():
         )
 
     if uploaded_file is not None:
-            
             file_container = st.expander("Check your uploaded .csv")
             shows = pd.read_csv(uploaded_file)
             uploaded_file.seek(0)
@@ -36,9 +35,8 @@ def main():
     df = pd.read_csv(
         uploaded_file, 
         na_values=['NA', '?'])
-    st.write("columns in uploaded Dataset: ")      
-    st.write(df.columns)
     # for col in df.columns:       
+    st.write(df.columns)
     with st.form('Data Information'):
         st.subheader("Enter following information for your data:")
 

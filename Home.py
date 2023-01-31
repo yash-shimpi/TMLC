@@ -35,7 +35,8 @@ def main():
     df = pd.read_csv(
         uploaded_file, 
         na_values=['NA', '?'])
-    st.write(df.columns)
+    for col in df.columns:       
+        st.write(col)
     with st.form('Data Information'):
         st.subheader("Enter following information for your data:")
 

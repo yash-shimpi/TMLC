@@ -36,7 +36,7 @@ def main():
         uploaded_file, 
         na_values=['NA', '?'])
     # for col in df.columns:       
-    st.write(df.columns)
+    st.write(list(df.columns))
     with st.form('Data Information'):
         st.subheader("Enter following information for your data:")
 

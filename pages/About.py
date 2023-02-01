@@ -22,3 +22,16 @@ st.write(
     to the original data but is entirely different from the original data. 
     '''
 )
+
+st.subheader('Technology used: ')
+
+st.write(
+    '''
+    The core technology used behind Synthetic data generation is CTGANs (Conditional Tabular Generative Adversarial Networks).
+    CTGANs are basically GAN models modified for accepting and generating tabular data. GANs are generative models used to generate images,
+    sound, text and now tabular data. GANs are made from combining two Neural Networks models and training them against each other. One is Generator
+    and other is Discriminator. Generator's task is to generate fake data that can resemble the real data such that it can fool the Discriminator model
+    while Discriminator model's task is to Discriminate between real and generated fake data. Generator is penalised if fake data is detected by discriminator.
+    Both these models are trained simultaneously, where generator becomes better and better in generating fake data such that it can fool the discriminator.
+    '''
+)

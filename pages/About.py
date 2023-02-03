@@ -47,6 +47,8 @@ st.write(
     1. Generative Adversarial Networks - [**GANs**](https://arxiv.org/pdf/1406.2661.pdf)
     2. Conditional Tabular GANs - [**CTGAN**](https://proceedings.neurips.cc/paper/2019/file/254ed7d2de3b23ab10936522dd547b78-Paper.pdf)
     3. TabGANs by diyago - [Github](https://github.com/Diyago/GAN-for-tabular-data)
+
+    
     '''
 )
 c1, c2, c3 = st.columns(3)

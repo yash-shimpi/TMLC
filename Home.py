@@ -26,7 +26,7 @@ def main():
     else:
             st.info(
                 f"""
-                    👆 Upload a .csv file first. Sample to try: [biostats.csv](https://people.sc.fsu.edu/~jburkardt/data/csv/biostats.csv)
+                    👆 Upload a .csv file first. Sample to try: [auto-mpg.csv](https://drive.google.com/file/d/1szGbzgfhqyOhNISkEoIH-q_mKzto9irY/view?usp=sharing)
                     """
             )
 

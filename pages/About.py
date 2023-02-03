@@ -55,5 +55,5 @@ with c1:
 with c2:
     st.info('**GitHub: [@yash-shimpi](https://github.com/yash-shimpi)**', icon="🐱")
 with c3:
-    st.info('**Email: [Mail ID](shimpiyash573@gmail.com)**', icon="📩")
+    st.info('**shimpiyash573@gmail.com**', icon="📩")
 

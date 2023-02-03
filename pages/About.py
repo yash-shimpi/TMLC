@@ -49,3 +49,11 @@ st.write(
     3. TabGANs by diyago - [Github](https://github.com/Diyago/GAN-for-tabular-data)
     '''
 )
+c1, c2, c3 = st.columns(3)
+with c1:
+    st.info('**LinkedIn: [Yash Shimpi](https://www.linkedin.com/in/yash-shimpi-42328b1b9/)**', icon="💻")
+with c2:
+    st.info('**GitHub: [@yash-shimpi](https://github.com/yash-shimpi)**', icon="🐱")
+with c3:
+    st.info('**Email: shimpiyash573@gmail.com**', icon="📩")
+

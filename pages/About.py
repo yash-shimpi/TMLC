@@ -35,3 +35,17 @@ st.write(
     Both these models are trained simultaneously, where generator becomes better and better in generating fake data such that it can fool the discriminator.
     '''
 )
+
+st.subheader('About the project: ')
+
+st.write(
+    '''
+    This webapp is developed by Yash Shimpi under the guidance of TMLC ([The Machine Learning Co.](https://themlco.com/)) Fellowship Programme. 
+    '''
+    '''
+    Reference Links:
+    1. Generative Adversarial Networks - [**GANs**](https://arxiv.org/pdf/1406.2661.pdf)
+    2. Conditional Tabular GANs - [**CTGAN**](https://proceedings.neurips.cc/paper/2019/file/254ed7d2de3b23ab10936522dd547b78-Paper.pdf)
+    3. TabGANs by diyago - [Github](https://github.com/Diyago/GAN-for-tabular-data)
+    '''
+)

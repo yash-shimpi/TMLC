@@ -79,13 +79,13 @@ def main():
         c2.subheader("Generated Data Summary")
         c2.write(gen_data.describe())
 
-        c3, c4 = st.columns(2)
+        # c3, c4 = st.columns(2)
 
-        c3.subheader("Correlation in original data: ")
-        c3.plotly_chart(corr_matrix(df))
+        st.subheader("Correlation in original data: ")
+        st.plotly_chart(corr_matrix(df))
 
-        c4.subheader("Correlation in generated data: ")
-        c4.plotly_chart(corr_matrix(gen_data))
+        st.subheader("Correlation in generated data: ")
+        st.plotly_chart(corr_matrix(gen_data))
 
 
 if __name__ == '__main__':

@@ -52,9 +52,6 @@ def main():
         gen_data = GAN(df, List_col, List_tar)
 
         st.download_button(label = 'Download CSV', data = gen_data.to_csv(), file_name = 'gen.csv')
-        st.write('Thanks for downloading!')
-
-
 
 if __name__ == '__main__':
     main()

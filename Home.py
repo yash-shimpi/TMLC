@@ -41,7 +41,8 @@ def main():
     with st.form('Data Information'):
         st.subheader("Enter following information for your data:")
 
-        Columns = st.text_input(label='Columns to be used including Target column (Ex: col1, col2, col3, ... )')
+        # Columns = st.text_input(label='Columns to be used including Target column (Ex: col1, col2, col3, ... )')
+        Columns = st.multiselect('Columns to be used: ', list(df.columns))
         Target = st.text_input(label='Target Column')
 
         submit = st.form_submit_button(label='Submit')

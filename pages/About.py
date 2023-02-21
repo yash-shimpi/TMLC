@@ -53,9 +53,9 @@ st.write(
 )
 c1, c2, c3 = st.columns(3)
 with c1:
-    st.info('**LinkedIn: [Yash Shimpi](https://www.linkedin.com/in/yash-shimpi-42328b1b9/)**', icon="💻")
+    st.info('**LinkedIn: [Yash Shimpi](https://www.linkedin.com/in/yash-shimpi-42328b1b9/)**')
 with c2:
-    st.info('**GitHub: [@yash-shimpi](https://github.com/yash-shimpi)**', icon="🐱")
+    st.info('**GitHub: [@yash-shimpi](https://github.com/yash-shimpi)**')
 with c3:
     st.info('**shimpiyash573@gmail.com**', icon="📩")
 

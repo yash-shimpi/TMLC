@@ -12,6 +12,19 @@ st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Data Genera
 
 st.markdown("<h1 style='text-align: center;'>Synthetic Data Generator App 🗂️</h1>", unsafe_allow_html=True)
 
+def corr_matrix(df):
+        df_corr = df.corr() # Generate correlation matrix
+        fig = go.Figure()
+        fig.add_trace(
+            go.Heatmap(
+                x = df_corr.columns,
+                y = df_corr.index,
+                z = np.array(df_corr)
+            )
+        )
+
+        return fig 
+
 def main():
     uploaded_file = st.file_uploader(
             "",
@@ -66,16 +79,14 @@ def main():
         c2.subheader("Generated Data Summary")
         c2.write(gen_data.describe())
 
-        df_corr = df.corr() # Generate correlation matrix
-        fig = go.Figure()
-        fig.add_trace(
-            go.Heatmap(
-                x = df_corr.columns,
-                y = df_corr.index,
-                z = np.array(df_corr)
-            )
-        )
-        st.plotly_chart(fig)
+        c3, c4 = st.columns(2)
+
+        c3.subheader("Correlation in original data: ")
+        c3.plotly_chart(corr_matrix(df))
+
+        c4.subheader("Correlation in generated data: ")
+        c4.plotly_chart(corr_matrix(gen_data))
+
 
 if __name__ == '__main__':
     main()

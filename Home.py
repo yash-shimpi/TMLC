@@ -56,6 +56,14 @@ def main():
         file_container_gen = st.expander("Check your Generated data")
         file_container_gen.write(gen_data)
 
+        c1,c2=st.columns(2)
+        
+        c1.subheader("Original Data Summary")
+        c1.write(df.describe())
+
+        c2.subheader("Generated Data Summary")
+        c2.write(gen_data.describe())
+
 if __name__ == '__main__':
     main()
 

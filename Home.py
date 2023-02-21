@@ -1,6 +1,8 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
+import plotly.express as px
+import plotly.graph_objects as go
 from gan import GAN
 
 st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Data Generator", layout="centered")
@@ -57,12 +59,23 @@ def main():
         file_container_gen.write(gen_data)
 
         c1,c2=st.columns(2)
-        
+
         c1.subheader("Original Data Summary")
         c1.write(df.describe())
 
         c2.subheader("Generated Data Summary")
         c2.write(gen_data.describe())
+
+        df_corr = df.corr() # Generate correlation matrix
+        fig = go.Figure()
+        fig.add_trace(
+            go.Heatmap(
+                x = df_corr.columns,
+                y = df_corr.index,
+                z = np.array(df_corr)
+            )
+        )
+        st.plotly_chart(fig)
 
 if __name__ == '__main__':
     main()

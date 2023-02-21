@@ -24,7 +24,8 @@ st.write(
 
 st.subheader('Technology used: ')
 
-Image.open('images/GANs.png')
+c1=st.columns(1)
+c1.image(Image.open('images/GANs.png'))
 
 st.write(
     '''

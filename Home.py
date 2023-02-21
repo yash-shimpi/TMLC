@@ -41,24 +41,19 @@ def main():
     with st.form('Data Information'):
         st.subheader("Enter following information for your data:")
 
-        # Columns = st.text_input(label='Columns to be used including Target column (Ex: col1, col2, col3, ... )')
         Columns = st.multiselect('Columns to be used: ', list(df.columns))
-        Target = st.text_input(label='Target Column')
+        Target = st.multiselect('Target Column: ', list(df.columns))
 
         submit = st.form_submit_button(label='Submit')
 
     if submit:
-        # print(Columns.dtype)
         List_col = Columns.split(", ")
         List_tar = Target.split(",")
         gen_data = GAN(df, List_col, List_tar)
-        # gen_data.to_csv('file.csv')
-        # st.download_button()
 
         st.download_button(label = 'Download CSV', data = gen_data.to_csv(), file_name = 'gen.csv')
-            # st.write('Thanks for downloading!')
+        st.write('Thanks for downloading!')
 
-# st.markdown("<h1 style='text-align: center;'>Synthetic Data Generator App 🗂️</h1>", unsafe_allow_html = True)
 
 
 if __name__ == '__main__':

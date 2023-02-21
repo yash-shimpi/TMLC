@@ -52,7 +52,6 @@ def main():
         gen_data = GAN(df, List_col, List_tar)
 
         st.download_button(label = 'Download CSV', data = gen_data.to_csv(), file_name = 'gen.csv')
-
         
         file_container_gen = st.expander("Check your Generated data")
         shows = pd.read_csv(gen_data.to_csv())

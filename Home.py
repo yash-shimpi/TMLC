@@ -53,8 +53,9 @@ def main():
 
         st.download_button(label = 'Download CSV', data = gen_data.to_csv(), file_name = 'gen.csv')
 
+        
         file_container_gen = st.expander("Check your Generated data")
-        shows = pd.read_csv('gen.csv')
+        shows = pd.read_csv(gen_data.to_csv())
         # uploaded_file.seek(0)
         file_container_gen.write(shows)
 

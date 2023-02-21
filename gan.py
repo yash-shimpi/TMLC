@@ -48,8 +48,8 @@ def GAN(df, columns, target):
     # gen_x[target] = 
     gen_x = pd.concat([gen_x, targetdf], axis=1)
     # print(gen_x.shape)
-    print("HIIIII")
-    print(gen_x.shape)
+    # print("HIIIII")
+    # print(gen_x.shape)
     return gen_x
 
 

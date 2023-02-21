@@ -47,8 +47,8 @@ def main():
         submit = st.form_submit_button(label='Submit')
 
     if submit:
-        List_col = Columns.split(", ")
-        List_tar = Target.split(",")
+        List_col = Columns
+        List_tar = Target
         gen_data = GAN(df, List_col, List_tar)
 
         st.download_button(label = 'Download CSV', data = gen_data.to_csv(), file_name = 'gen.csv')

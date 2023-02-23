@@ -65,6 +65,7 @@ def main():
         List_col = Columns
         List_tar = Target
         gen_data = GAN(df, List_col, List_tar)
+        df = df[List_col]
 
         st.download_button(label = 'Download CSV', data = gen_data.to_csv(), file_name = 'gen.csv')
         

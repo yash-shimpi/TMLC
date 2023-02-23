@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import plotly.express as px
 import plotly.graph_objects as go
+import matplotlib.pyplot as plt
 from gan import GAN
 
 st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Data Generator", layout="centered")
@@ -66,27 +67,66 @@ def main():
         List_tar = Target
         gen_data = GAN(df, List_col, List_tar)
         df = df[List_col]
+        NUMERICAL_COLS = list(set(df._get_numeric_data().columns))
+
+
 
         st.download_button(label = 'Download CSV', data = gen_data.to_csv(), file_name = 'gen.csv')
         
         file_container_gen = st.expander("Check your Generated data")
         file_container_gen.write(gen_data)
 
-        c1,c2=st.columns(2)
+        # c1,c2=st.columns(2)
 
-        c1.subheader("Original Data Summary")
-        c1.write(df.describe())
+        # c1.subheader("Original Data Summary")
+        # c1.write(df.describe())
 
-        c2.subheader("Generated Data Summary")
-        c2.write(gen_data.describe())
+        # c2.subheader("Generated Data Summary")
+        # c2.write(gen_data.describe())
 
-        # c3, c4 = st.columns(2)
+        # # c3, c4 = st.columns(2)
 
-        st.subheader("Correlation in original data: ")
-        st.plotly_chart(corr_matrix(df))
+        # st.subheader("Correlation in original data: ")
+        # st.plotly_chart(corr_matrix(df))
 
-        st.subheader("Correlation in generated data: ")
-        st.plotly_chart(corr_matrix(gen_data))
+        # st.subheader("Correlation in generated data: ")
+        # st.plotly_chart(corr_matrix(gen_data))
+
+        # Assume `df_original` is a Pandas dataframe of the original data
+        # and `df_generated` is a Pandas dataframe of the generated data
+        for col1 in NUMERICAL_COLS:
+            for col2 in NUMERICAL_COLS:
+                if col1 == col2:
+                    continue
+
+                # Create a scatter plot using Plotly
+                fig = px.scatter(
+                    x=df[col1],
+                    y=df[col2],
+                    color_discrete_sequence=["blue"],
+                    labels={
+                        "x": col1,
+                        "y": col2,
+                    },
+                    title=f"{col1} vs. {col2} Scatterplot (Original Data)",
+                )
+
+                # Add the generated data to the scatter plot
+                fig.add_trace(
+                    px.scatter(
+                        x=gen_data[col1],
+                        y=gen_data[col2],
+                        color_discrete_sequence=["red"],
+                        labels={
+                            "x": col1,
+                            "y": col2,
+                        },
+                        title=f"{col1} vs. {col2} Scatterplot (Generated Data)",
+                    ).data[0]
+                )
+
+                # Show the scatter plot on Streamlit
+                st.plotly_chart(fig)
 
 
 if __name__ == '__main__':

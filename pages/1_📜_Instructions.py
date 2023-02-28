@@ -25,8 +25,6 @@ st.subheader('Precautions: ')
 
 st.write(
     '''
-    1. Please check the exact column names along with extra spaces
-
-    2. Please mention atleast one target/label column 
+    1. Please mention atleast one target/label column 
     '''
 )

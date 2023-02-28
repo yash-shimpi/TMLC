@@ -28,3 +28,16 @@ st.write(
     1. Please mention atleast one target/label column 
     '''
 )
+
+st.title('Note:')
+
+st.write(
+    '''
+    1. This data generation technique uses GANs for generating data and each time new data is uploaded, GAN model is trained 
+    on the new data and the quality of generated data depends on this training.
+
+    2. Ideally for achieving best results, GAN model should be tuned each time but even without it, can achieve satisfactory results.
+
+    3. Generated data is statistically similar to the original data and not a replica or copy of it.
+    '''
+)

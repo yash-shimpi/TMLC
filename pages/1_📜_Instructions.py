@@ -39,5 +39,7 @@ st.write(
     2. Ideally for achieving best results, GAN model should be tuned each time but even without it, can achieve satisfactory results.
 
     3. Generated data is statistically similar to the original data and not a replica or copy of it.
+
+    4. For more info, do visit the references in the About page. 
     '''
 )

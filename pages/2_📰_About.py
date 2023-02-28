@@ -54,13 +54,13 @@ st.write(
 )
 c1, c2 = st.columns(2)
 with c1:
-    st.info('**LinkedIn: [Yash Shimpi](https://www.linkedin.com/in/yash-shimpi-42328b1b9/)**')
+    st.info('**LinkedIn: [Yash Shimpi](https://www.linkedin.com/in/yash-shimpi-42328b1b9/)**', icon="🛄")
 with c2:
-    st.info('**GitHub: [@yash-shimpi](https://github.com/yash-shimpi)**')
+    st.info('**GitHub: [@yash-shimpi](https://github.com/yash-shimpi)**', icon="🐱")
 
 c3, c4 = st.columns(2)
 with c3:
-    st.info('**shimpiyash573@gmail.com**', icon="📩")
+    st.info('**Email: shimpiyash573@gmail.com**', icon="📩")
 with c4:
     st.info('**[Repository](https://github.com/yash-shimpi/TMLC)**', icon="📑")
 

@@ -9,7 +9,7 @@ st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Data Genera
 
 # st.markdown("<h1 style='text-align: center;'>Instructions</h1>", unsafe_allow_html=True)
 
-st.title('Instructions')
+st.subheader('Instructions')
 
 st.write(
     """
@@ -29,7 +29,7 @@ st.write(
     '''
 )
 
-st.title('Note:')
+st.subheader('Note:')
 
 st.write(
     '''

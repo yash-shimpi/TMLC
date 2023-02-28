@@ -30,6 +30,7 @@ def main():
             "",
             key="1",
             help="To activate 'wide mode', go to the hamburger menu > Settings > turn on 'wide mode'",
+            type=["csv"]
         )
 
     if uploaded_file is not None:

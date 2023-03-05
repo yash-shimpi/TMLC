@@ -46,10 +46,10 @@ def GAN(df, columns, target):
     targetdf = pd.DataFrame(gen_y)
     targetdf.columns = target
     gen_x = pd.concat([gen_x, targetdf], axis=1)
-    print(list(le.classes_))
-    print(gen_x['Stability'].unique())
-    # for i in CATEGORICAL_COLS:
-    #     gen_x[i] = le.inverse_transform(gen_x[i].astype(str))
+    # print(list(le.classes_))
+    # print(gen_x['Stability'].unique())
+    for i in CATEGORICAL_COLS:
+        gen_x[i] = le.inverse_transform(gen_x[i])
     return gen_x
 
 

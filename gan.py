@@ -42,7 +42,7 @@ def GAN(df, columns, target):
             df_x_test, deep_copy=True, only_adversarial=False, \
             use_adversarial=True)
 
-    # gen_x = le.inverse_transform(gen_x)
+    gen_x = le.inverse_transform(gen_x)
     targetdf = pd.DataFrame(gen_y)
     targetdf.columns = target
     # gen_x[target] = 

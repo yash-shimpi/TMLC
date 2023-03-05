@@ -47,8 +47,9 @@ def GAN(df, columns, target):
     targetdf.columns = target
     # gen_x[target] = 
     gen_x = pd.concat([gen_x, targetdf], axis=1)
-    for i in CATEGORICAL_COLS:
-        gen_x[i] = le.inverse_transform(gen_x[i].astype(str))
+    print(list(le.classes_))
+    # for i in CATEGORICAL_COLS:
+    #     gen_x[i] = le.inverse_transform(gen_x[i].astype(str))
     # print(gen_x.shape)
     # print("HIIIII")
     # print(gen_x.shape)

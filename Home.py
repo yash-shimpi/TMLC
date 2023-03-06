@@ -84,56 +84,11 @@ def main():
         c2.subheader("Generated Data Summary")
         c2.write(gen_data.describe())
 
-        # c3, c4 = st.columns(2)
-
         st.subheader("Correlation in original data: ")
         st.plotly_chart(corr_matrix(df))
 
         st.subheader("Correlation in generated data: ")
         st.plotly_chart(corr_matrix(gen_data))
 
-        # Assume `df_original` is a Pandas dataframe of the original data
-        # and `df_generated` is a Pandas dataframe of the generated data
-        # for col in NUMERICAL_COLS:
-        #     if col == List_tar:
-        #         continue
-
-        #     # Create a scatter plot using Plotly for the original data
-        #     fig_original = px.scatter(
-        #         x=df[col],
-        #         y=df[List_tar],
-        #         color_discrete_sequence=["blue"],
-        #         labels={
-        #             "x": col,
-        #             "y": List_tar,
-        #         },
-        #         title=f"{col} vs. {List_tar} Scatterplot (Original Data)",
-        #     )
-
-        #     # Create a scatter plot using Plotly for the generated data
-        #     fig_generated = px.scatter(
-        #         x=gen_data[col],
-        #         y=gen_data[List_tar],
-        #         color_discrete_sequence=["red"],
-        #         labels={
-        #             "x": col,
-        #             "y": List_tar,
-        #         },
-        #         title=f"{col} vs. {List_tar} Scatterplot (Generated Data)",
-        #     )
-
-        #     # Show the scatter plots side-by-side on Streamlit
-        #     st.write(f"### {col} vs. {List_tar}")
-        #     col1, col2 = st.beta_columns(2)
-        #     with col1:
-        #         st.plotly_chart(fig_original)
-        #     with col2:
-        #         st.plotly_chart(fig_generated)
-
-
 if __name__ == '__main__':
     main()
-
-#Data visualization metric
-#developed by .... 
-# Name,"Sex","Age","Height (in)","Weight (lbs)" 

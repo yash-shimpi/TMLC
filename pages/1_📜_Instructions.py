@@ -13,11 +13,11 @@ st.subheader('Instructions')
 
 st.write(
     """
-    1. Upload the data in CSV format you want to generate data on.
+    1. Upload the data in CSV format you want to generate data on - you can try with [auto-mpg.csv](https://drive.google.com/file/d/1iwH3VUWOvlyNw1a4K0r1E05gnc9ZHCVR/view?usp=sharing).
 
-    2. Mention the column names as they are in the dataframe (include every column you want to generate data on).
+    2. Mention the column names as they are in the dataframe (include every column you want to generate data on). 
 
-    3. Mention the target column (required to mention **one** column)
+    3. Mention the target column (required to mention **one** column). For example, say 'origin' column of auto-mpg dataset.
     """
 )
 
@@ -25,7 +25,7 @@ st.subheader('Precautions: ')
 
 st.write(
     '''
-    1. Please mention atleast one target/label column 
+    1. Please mention atleast one target/label column. 
     '''
 )
 

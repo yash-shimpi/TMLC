@@ -10,7 +10,7 @@ st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Data Genera
 # with open('style.css') as f:
 #      st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
 
-st.markdown("<h1 style='text-align: center;'>TableForge - Generate Tabular Data 🗂️</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center;'>TableForge 🗂️</h1>", unsafe_allow_html=True)
 
 def corr_matrix(df):
         df_corr = df.corr() # Generate correlation matrix

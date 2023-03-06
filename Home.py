@@ -4,7 +4,7 @@ import numpy as np
 import plotly.graph_objects as go
 from gan import GAN
 
-st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Data Generator", layout="centered")
+st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Tableforge", layout="centered")
 
 st.markdown("<h1 style='text-align: center;'>Synthetic Data Generator App 🗂️</h1>", unsafe_allow_html=True)
 

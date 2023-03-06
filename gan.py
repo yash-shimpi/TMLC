@@ -1,6 +1,5 @@
 from tabgan.sampler import GANGenerator
 import pandas as pd
-import numpy as np
 from sklearn.model_selection import train_test_split
 from sklearn import preprocessing
 
@@ -14,16 +13,13 @@ def GAN(df, columns, target):
     for i in CATEGORICAL_COLS:
         df[i] = le.fit_transform(df[i].astype(str))
     
-    # Split into training and test sets
     df_x_train, df_x_test, df_y_train, df_y_test = train_test_split(
         df.drop(target, axis=1),
         df[target],
         test_size=0.20,
-        #shuffle=False,
         random_state=42,
     )
 
-    # Create dataframe versions for tabular GAN
     df_x_test, df_y_test = df_x_test.reset_index(drop=True), \
     df_y_test.reset_index(drop=True)
     df_y_train = pd.DataFrame(df_y_train)
@@ -42,12 +38,9 @@ def GAN(df, columns, target):
             df_x_test, deep_copy=True, only_adversarial=False, \
             use_adversarial=True)
 
-    # gen_x = le.inverse_transform(gen_x)
     targetdf = pd.DataFrame(gen_y)
     targetdf.columns = target
     gen_x = pd.concat([gen_x, targetdf], axis=1)
-    # print(list(le.classes_))
-    # print(gen_x['Stability'].unique())
     for i in CATEGORICAL_COLS:
         gen_x[i] = le.inverse_transform(gen_x[i])
     return gen_x

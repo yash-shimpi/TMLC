@@ -1,19 +1,15 @@
 import streamlit as st
 import pandas as pd
 import numpy as np
-import plotly.express as px
 import plotly.graph_objects as go
 from gan import GAN
 
 st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Data Generator", layout="centered")
 
-# with open('style.css') as f:
-#      st.markdown(f'<style>{f.read()}</style>', unsafe_allow_html = True)
-
 st.markdown("<h1 style='text-align: center;'>Synthetic Data Generator App 🗂️</h1>", unsafe_allow_html=True)
 
 def corr_matrix(df):
-        df_corr = df.corr() # Generate correlation matrix
+        df_corr = df.corr() 
         fig = go.Figure()
         fig.add_trace(
             go.Heatmap(
@@ -22,7 +18,6 @@ def corr_matrix(df):
                 z = np.array(df_corr)
             )
         )
-
         return fig 
 
 def main():
@@ -38,7 +33,6 @@ def main():
             shows = pd.read_csv(uploaded_file)
             uploaded_file.seek(0)
             file_container.write(shows)
-
     else:
             st.info(
                 f"""
@@ -50,8 +44,7 @@ def main():
 
     df = pd.read_csv(
         uploaded_file, 
-        na_values=['NA', '?'])
-    # for col in df.columns:    
+        na_values=['NA', '?'])  
     st.write("Columns in uploaded Dataset: ")         
     st.write(list(df.columns))
     with st.form('Data Information'):
@@ -67,10 +60,6 @@ def main():
         List_tar = Target
         gen_data = GAN(df, List_col, List_tar)
         df = df[List_col]
-        NUMERICAL_COLS = list(set(df._get_numeric_data().columns))
-
-
-
         st.download_button(label = 'Download CSV', data = gen_data.to_csv(), file_name = 'gen.csv')
         
         file_container_gen = st.expander("Check your Generated data")

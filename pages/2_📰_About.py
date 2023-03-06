@@ -1,7 +1,7 @@
 import streamlit as st
 from PIL import Image
 
-st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Data Generator", layout="centered")
+st.set_page_config(page_icon="chart_with_upwards_trend", page_title="Tableforge", layout="centered")
 
 st.title('About')
 

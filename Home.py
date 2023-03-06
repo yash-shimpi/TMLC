@@ -42,7 +42,7 @@ def main():
     else:
             st.info(
                 f"""
-                    👆 Upload a .csv file first. Sample to try: [auto-mpg.csv](https://drive.google.com/file/d/1szGbzgfhqyOhNISkEoIH-q_mKzto9irY/view?usp=sharing)
+                    👆 Upload a .csv file first. Sample to try: [auto-mpg.csv](https://drive.google.com/file/d/1iwH3VUWOvlyNw1a4K0r1E05gnc9ZHCVR/view?usp=sharing)
                     """
             )
 
